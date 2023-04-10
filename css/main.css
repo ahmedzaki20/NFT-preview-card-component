@@ -1,0 +1,148 @@
+:root {
+  --main: hsl(217, 54%, 11%);
+  --card: hsl(216, 50%, 16%);
+  --line: hsl(215deg 8.71% 51.62%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* Screens size */
+/* Small screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* section */
+section {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+}
+img {
+  max-width: 100%;
+}
+section .card {
+  width: 300px;
+  background-color: var(--card);
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+section .card .img {
+  position: relative;
+}
+section .card .img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -ms-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  background-color: #008cba;
+  opacity: 0;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+section .card .img:hover .overlay {
+  display: block;
+  opacity: 0.5;
+}
+section .card .img .overlay i {
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  color: white;
+}
+section .card .img > img {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+section .card .img > img:hover {
+}
+section .card .text {
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+section .card h3 {
+  color: var(--white);
+}
+section .card p {
+  color: var(--line);
+}
+section .card .text p:last-of-type {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+section .card .text p span:first-of-type {
+  color: aqua;
+}
+section .card .text p span i {
+  margin-right: 2px;
+}
+section .card .avater {
+  margin-top: 10px;
+  color: var(--line);
+  font-size: 10px;
+}
+section .card .avater img {
+  width: 17px;
+  margin-bottom: -4px;
+  margin-right: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+section .card .avater span span {
+  color: aqua;
+}
